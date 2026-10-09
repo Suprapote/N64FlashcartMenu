@@ -34,7 +34,7 @@ jobs:
           imageName: ghcr.io/n64brew/n64flashcartmenu-ci-devcontainer
           cacheFrom: ghcr.io/n64brew/n64flashcartmenu-ci-devcontainer
           configFile: .devcontainer/ci/devcontainer.json
-          push: ${{ github.repository_owner == 'Polprzewodnikowy' && 'filter' || 'never' }}
+          push: ${{ github.repository_owner == 'n64brew' && 'filter' || 'never' }}
           refFilterForPush: refs/heads/main
           runCmd: |
             make all -j
